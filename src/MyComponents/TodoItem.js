@@ -1,14 +1,16 @@
 import React from 'react'
 
-export const TodoItem = ({todo, onDelete}) => {
+export const TodoItem = ({ todo, onDelete }) => {
     return (
         <>
-        <div>
-           <h4>{todo.title}</h4>
-           <p>{todo.desc}</p>
-           <button className="btn btn-sm btn-danger text" onClick={()=>{onDelete(todo)}}>Delete</button> 
-        </div>
-        <hr/> 
+            <div className='card  w-50 border-bottom  my-2' >
+                <div className="card-body d-flex  flex-column">
+                    <h4 className='card-text'>{todo.title}</h4>
+                    <p className='card-text'>{todo.desc}</p>
+                    <button className="btn btn-sm btn-danger " onClick={() => { onDelete(todo) }}>Delete</button>
+                </div>
+            </div>
+           
         </>
     )
 }
